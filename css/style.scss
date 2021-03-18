@@ -1,0 +1,230 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    // transition: 0.3s;
+    // border: 1px solid rgba(255, 0, 0, 0.048);
+}
+
+
+
+
+
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin FlexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin Flexleft {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+@mixin Flex-left-bottom {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+@mixin Flex-rigth-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+@mixin col($col) {
+    width: 100%;
+    max-width: calc((100% / 12) * #{$col});
+}
+
+
+@mixin button {
+    cursor: pointer;
+    padding: 5px 20px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+@mixin content($width) {
+    display: block;
+    width: 100%;
+    max-width: #{ $width }px;
+    margin: 0 auto;
+}
+
+
+.content{
+    @include content(1220)
+}
+
+.content-fluid {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+$white-color: #fff;
+$red-color:  #F05454;
+$red-color-hover:  #f05454c5;
+$green-color: #00E676;
+$green-color-hover: rgba(0, 230, 119, 0.89);
+$black-color: rgba(48, 71, 94, 0.85);
+$description-color: rgba(0, 0, 0, 0.25);
+
+
+
+
+
+
+.green-button{
+    color: $white-color;
+    background: $green-color;
+    @include button();
+    &:hover{
+        background: $green-color-hover;
+    }
+}
+
+
+.red-button{
+    color: $white-color;
+    background: $red-color;
+    @include button();
+    &:hover{
+        background: $red-color-hover;
+    }
+}
+
+
+
+.logo{
+    display: block;
+    width: 312px;
+
+    @media (max-width: 768px) {
+        margin: 0 auto;
+    }
+}
+
+.information{
+    @include FlexSpaceBetween();
+    .info{
+        @include col(6);
+        @include FlexSpaceBetween();
+        .col{
+            width: 400px;
+            .red-block{
+                width: 100%;
+                a{
+                    width: 100%;
+                    @include Flex-rigth-center();
+                    color: $red-color;
+                    text-align: right;
+                    font-size: 22px;
+                    &:hover{
+                        color: $red-color-hover;
+                    }
+                    img{
+                        margin-right: 5px;
+                    }
+
+                }
+            }
+            .black-block{
+                position: relative;
+                margin-top: 25px;
+                a{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    color: $black-color;
+                    text-align: right;
+                    img{
+                        margin-right: 5px;
+                    }
+                    span{
+                        font-size: 24px;
+                        margin-left: 5px;
+                    }
+                }
+                .descreption{
+                    position: absolute;
+                    right: 0;
+                    font-size: 14px;
+                    top: -15px;
+                    color: rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+        .soc-site{
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            a{
+                &:nth-of-type(1){
+                    margin-left: 2px;
+                    margin-bottom: 5px;
+                }
+                // img{
+                //     width: 50px;
+                // }
+            }
+        }
+    }
+}
+
+
+
+
+header{
+    width: 100%;
+    height: 600px;
+    background: url(../img/header/header-bg.png) no-repeat center center;
+    background-size: cover;
+    .header-body{
+        width: 100%;
+        height: 100%;
+        background: $black-color;
+        .mneu{
+            width: 100%;
+            height: 80px;
+            background: $red-color;
+            @include Flexleft();
+            color: $white-color;
+            padding: 0 25px;
+            a{
+                color: $white-color;
+                font-size: 20px;
+                padding: 27px 0;
+                margin-right: 40px;
+                
+            }
+        }
+    }
+}
