@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW Site</title>
     
     
@@ -12,28 +13,29 @@
  
 
     <!-- SCRIPTS  -->
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 </head>
 <body>
     
 
     <div class="content information">
         <a href="/" class="logo">
-            <img src="img/Logo.svg" alt="">
+            <img class="lazyload" data-src="img/Logo.svg" alt="">
         </a>
         <div class="info">
 
             <div class="col">
                 <div class="red-block">
                     <a href="#">
-                        <img src="img/icons/route.svg" alt="">
+                        <img class="lazyload" data-src="img/icons/route.svg" alt="">
                         Проложить маршрут 
                     </a>
                 </div>
                 <div class="black-block">
                     <p class="descreption">Круглосуточно 24 / 7</p>
                     <a href="#">
-                        <img src="img/icons/maps.svg" alt="">
+                        <img class="lazyload" data-src="img/icons/maps.svg" alt="">
                         Москва, 32-й км., вл. 4, вход 7
                     </a>
                 </div>
@@ -42,14 +44,14 @@
             <div class="col">
                 <div class="red-block">
                     <a href="#">
-                        <img src="img/icons/route.svg" alt="">
+                        <img class="lazyload" data-src="img/icons/route.svg" alt="">
                         Заказать звонок 
                     </a>
                 </div>
                 <div class="black-block">
                     <p class="descreption">Многоканальный телефон</p>
                     <a href="tel:8495545-55-55">
-                        <img src="img/icons/maps.svg" alt="">
+                        <img class="lazyload" data-src="img/icons/maps.svg" alt="">
                         8 (495) <span> 545-55-55</span> 
                     </a>
                 </div>
@@ -86,12 +88,150 @@
                 </div>
 
                 <!-- menu  -->
+
+
+
+                <!-- header text block  -->
+
+                <div class="block-header-information">
+                    <h1>ПРОФЕССИОНАЛЬНЫЙ РЕМОНТ АКПП</h1>
+                    <p class="sub-title">
+                        Это искусство! Наши специалисты с ювелирной точностью исполняют работы с АКПП. Профессионально и качественно!
+                    </p>
+                </div>
+                
+                <!-- header text block  -->
+
+
+
+                <!-- forma header  -->
+                
+                <div class="form-header">
+                    <p class="title">
+                        <span>Связаться с нами</span>
+                    </p>
+                    <form action="#">
+                        <div class="row">
+                            <label class="white-inputs" for="user-name">
+                                <img class="lazyload" data-src="img/icons/user-name.svg" alt="User Name">
+                                <input id="user-name" name="user-name" type="text" placeholder="Ваше имя" >
+                            </label>
+
+                            <label class="white-inputs" for="user-phone">
+                                <img class="lazyload" data-src="img/icons/red-call.svg" alt="Tel name group">
+                                <input id="user-phone" name="user-phone" type="tel" placeholder="Ваш телефон " >
+                            </label>
+
+                            <label class="white-inputs" for="user-email">
+                                <img class="lazyload" data-src="img/icons/red-mail.svg" alt="Usel email group" >
+                                <input id="user-email" name="user-email" type="email" placeholder="Ваша почта" >
+                            </label>
+                        </div>
+                        <button type="submit" class="white-button">Отправить</button>
+                    </form>
+                </div>
+
+                <!-- forma header  -->
+                
+                
             </div>
         </div>
     </header>
 
-
     <!-- header  -->
+
+
+
+
+
+
+    <section class="evocuator-block">
+        <div class="img-block">
+            <img class="lazyload" data-src="img/evocuator/evocuator.png" alt="group evocator site">
+        </div>
+        <div class="ev-information">
+            <h1>ЭВАКУАТОР</h1>
+            <p class="text">Доставим Ваш автомобиль до мастерской</p>
+            <div class="row">
+                <button class="red-button">Бесплатно</button>
+                <button class="green-button">Заказать звонок</button>
+            </div>
+            <h1>И МЫ РАБОТАЕМ</h1>
+
+
+
+            <!-- slider marka  -->
+            <div class="slider-evocuator">
+                <div class="images">
+                    <img class="lazyload" data-src="img/evocuator/car-model/mercedes_logo.png" alt="Mercedes Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/bmw_logo.png" alt="BMW Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/audi_logo.png" alt="Audi Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/toyota_logo.png" alt="Toyota Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/mazda_logo.png" alt="mazga Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/ford_logo.png" alt="ford Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/leuxs_logo.png" alt="Lexsus Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/jaguar_logo.png" alt="Jaguar Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/chevrolet_logo.png" alt="Chevrolet Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/kia_logo.png" alt="Kia Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/nissan_logo.png" alt="nisan Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/mitsubishi_logo.png" alt="Mitsubishi Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/volkswagen_logo.png" alt="volkswagen Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/honda_logo.png" alt="honda Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/hyundai_logo.png" alt="hyundai Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/land_rover_logo.png" alt="land rover Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/porsche_logo.png" alt="porsche Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/infiniti_logo.png" alt="infiniti Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/opel_logo.png" alt="pel Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/volvo_logo.png" alt="olvo Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/suzuki_logo.png" alt="suzuki Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/skoda_logo.png" alt="skoda Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/renault_logo.png" alt="enault Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/peugeot_logo.png" alt="peugeot_ Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/citroen_logo.png" alt="citroen Logo">
+                    <img class="lazyload" data-src="img/evocuator/car-model/daewoo_logo.png" alt="daewoo Logo">
+                </div>
+            </div>
+            <!-- slider marka  -->
+
+
+
+            <!-- certificat  -->
+
+            <div class="slider-evocuator">
+                <div class="images">
+                    <img class="lazyload" data-src="img/evocuator/certificate/3m.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/autodoc.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/avtorus.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/castrol.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/duxone.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/motul.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/novol.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/ppg.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/quickline.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/shell.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/sia.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/spectral.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/spies_hecker.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/sunmight.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/avtorus.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/castrol.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/duxone.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/motul.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/novol.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/ppg.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/quickline.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/shell.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/sia.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/spectral.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/spies_hecker.jpg" alt="Certificate">
+                    <img class="lazyload" data-src="img/evocuator/certificate/sunmight.jpg" alt="Certificate">
+                </div>
+            </div>
+
+            <!-- certificat  -->
+        </div>
+    </section>
+
 
 
 
