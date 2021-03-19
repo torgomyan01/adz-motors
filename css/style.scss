@@ -436,3 +436,114 @@ header{
         }
     }
 }
+
+
+.black-title-h1{
+    width: 100%;
+    margin-top: 200px;
+    @include FlexCenter();
+    span{
+        color: $black-color;
+        border-bottom: 1px solid $black-color;
+    }
+}
+
+
+// .7-work-reviewed{
+//     width: 100%;
+//     height: 700px;
+// }
+
+.work-reviewed{
+    width: 100%;
+    height: 800px;
+    @include FlexSpaceBetween();
+    margin-top: 100px;
+    .work{
+        @include col(8);
+        height: 100%;
+        @include Flex-space-between-top();
+        padding-left: 50px;
+        border-right: 1px solid $red-color;
+        padding-right: 15px;
+        .steps{
+            width: 45px;
+            height: 100%;
+            flex-direction: column;
+            .number{
+                width: 45px;
+                height: 45px;
+                border: 1px solid $red-color;
+                color: $red-color;
+                font-size: 30px;
+                border-radius: 50%;
+                @include FlexCenter();
+                position: relative;
+                margin-top: 65px;
+                &:after{
+                    content: "";
+                    width: 1px;
+                    height: 55px;
+                    background: $red-color;
+                    position: absolute;
+                    top: 49px;
+                    left: calc(50% - 1px);
+
+                }
+                &:nth-of-type(7)::after{
+                    display: none;
+                }
+                &.active{
+                    background: $red-color;
+                    color: $white-color;
+                    transition: 1s;
+                }
+            }
+        }
+        .text-and-image{
+            width: calc(100% - 50px);
+            height: 160px;
+            background: url(../img/work-reviewed/solid.png) no-repeat bottom center;
+            background-size: 100% 60px;
+            position: relative;
+            transition: 1s;
+            transform: translateY(-68px);
+            .title{
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 18px;
+                width: 18%;
+                text-align: center;
+                position: absolute;
+                bottom: 5px;
+                color: $black-color;
+            }
+            .text{
+                width: 80%;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 16px;
+                position: absolute;
+                left: 20%;
+                top: 105px;
+                color: $black-color;
+                a{
+                    color: $black-color;
+                    font-weight: bold;
+                }
+            }
+            .images{
+                width: 80%;
+                height: 80px;
+                position: absolute;
+                left: 20%;
+                top: 15px;
+                @include Flex-left-bottom();
+                img{
+                    margin-right: 10px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
