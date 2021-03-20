@@ -464,7 +464,8 @@ header{
         height: 100%;
         @include Flex-space-between-top();
         padding-left: 50px;
-        border-right: 1px solid $red-color;
+        // border-right: 1px solid $red-color;
+        box-shadow: 12px 0px 12px -12px #c1c1c1;
         padding-right: 15px;
         .steps{
             width: 45px;
@@ -525,7 +526,7 @@ header{
                 line-height: 16px;
                 position: absolute;
                 left: 20%;
-                top: 105px;
+                top: 108px;
                 color: $black-color;
                 a{
                     color: $black-color;
@@ -542,6 +543,82 @@ header{
                 img{
                     margin-right: 10px;
                     width: 100px;
+                }
+            }
+        }
+    }
+    .reviewed{
+        @include col(4);
+        .title{
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 26px;
+            text-align: center;
+            border-bottom: 1px solid rgba(48, 71, 94, 0.17);
+            color: $black-color;
+            // margin-bottom: 20px;
+            box-shadow: 0px 12px 12px -12px #c1c1c1;
+            margin-top: -10px;
+        }
+        .reviewed-parent-block{
+            width: 100%;
+            height: 800px;
+            overflow: auto;
+            .reviewed-block{
+                width: 100%;
+                height: auto;
+                padding: 10px 25px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(48, 71, 94, 0.17);
+                display: flex;
+                margin-top: 15px;
+                .img-block{
+                    width: 45px;
+                    height: 100%;
+                    margin-right: 10px;
+                    img{
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                    }
+                }
+                .information-block{
+                    width: calc(100% - 45px);
+                    height: auto;
+                    .user-name{
+                        font-weight: bold;
+                        font-size: 22px;
+                        line-height: 26px;
+                        color: $red-color;
+                    }
+                    .desc{
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: $black-color;
+                    }
+                    .starts{
+                        width: 100%;
+                        height: auto;
+                        @include Flex-left-center();
+                        margin: 3px 0;
+                        .start-img{
+                            margin-right: 3px;
+                            width: 14px;
+                            height: 14px;
+                            background: url(../img/work-reviewed/reviewed/star.svg) no-repeat center center;
+                            background-size: 14px;
+
+                        }
+                    }
+                    .text{
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: $black-color;
+                    }
                 }
             }
         }

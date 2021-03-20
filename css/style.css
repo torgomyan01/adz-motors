@@ -476,7 +476,8 @@ header {
         -ms-flex-align: end;
             align-items: end;
     padding-left: 50px;
-    border-right: 1px solid #F05454;
+    -webkit-box-shadow: 12px 0px 12px -12px #c1c1c1;
+            box-shadow: 12px 0px 12px -12px #c1c1c1;
     padding-right: 15px; }
     .work-reviewed .work .steps {
       width: 45px;
@@ -544,7 +545,7 @@ header {
         line-height: 16px;
         position: absolute;
         left: 20%;
-        top: 105px;
+        top: 108px;
         color: rgba(48, 71, 94, 0.85); }
         .work-reviewed .work .text-and-image .text a {
           color: rgba(48, 71, 94, 0.85);
@@ -567,5 +568,79 @@ header {
         .work-reviewed .work .text-and-image .images img {
           margin-right: 10px;
           width: 100px; }
+  .work-reviewed .reviewed {
+    width: 100%;
+    max-width: calc((100% / 12) * 4); }
+    .work-reviewed .reviewed .title {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+      border-bottom: 1px solid rgba(48, 71, 94, 0.17);
+      color: rgba(48, 71, 94, 0.85);
+      -webkit-box-shadow: 0px 12px 12px -12px #c1c1c1;
+              box-shadow: 0px 12px 12px -12px #c1c1c1;
+      margin-top: -10px; }
+    .work-reviewed .reviewed .reviewed-parent-block {
+      width: 100%;
+      height: 800px;
+      overflow: auto; }
+      .work-reviewed .reviewed .reviewed-parent-block .reviewed-block {
+        width: 100%;
+        height: auto;
+        padding: 10px 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(48, 71, 94, 0.17);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 15px; }
+        .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .img-block {
+          width: 45px;
+          height: 100%;
+          margin-right: 10px; }
+          .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .img-block img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%; }
+        .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .information-block {
+          width: calc(100% - 45px);
+          height: auto; }
+          .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .information-block .user-name {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 26px;
+            color: #F05454; }
+          .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .information-block .desc {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+            color: rgba(48, 71, 94, 0.85); }
+          .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .information-block .starts {
+            width: 100%;
+            height: auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: start;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin: 3px 0; }
+            .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .information-block .starts .start-img {
+              margin-right: 3px;
+              width: 14px;
+              height: 14px;
+              background: url(../img/work-reviewed/reviewed/star.svg) no-repeat center center;
+              background-size: 14px; }
+          .work-reviewed .reviewed .reviewed-parent-block .reviewed-block .information-block .text {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            color: rgba(48, 71, 94, 0.85); }
 
 /*# sourceMappingURL=style.css.map */
