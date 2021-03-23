@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +30,7 @@
     justify-content: start;
     align-items: center;
 }
+
 @mixin Flex-left-bottom {
     display: flex;
     justify-content: start;
@@ -42,6 +42,7 @@
     justify-content: flex-end;
     align-items: center;
 }
+
 @mixin Flex-space-between-top {
     display: flex;
     justify-content: space-between;
@@ -50,8 +51,14 @@
 
 
 @mixin col($col) {
-    width: 100%;
-    max-width: calc((100% / 12) * #{$col});
+    @if($col > 1) {
+        width: 100%;
+        max-width: calc((100% / 12) * #{$col});
+    }
+
+    @if($col==1) {
+        flex-grow: 1;
+    }
 }
 
 
@@ -72,7 +79,24 @@
 }
 
 
-.content{
+
+@mixin font-rem($size) {
+    font-size: calc(0.0625rem * #{ $size });
+}
+
+@mixin width-height-rem($width, $height) {
+    @if($width > 0) {
+        width: calc(0.0625rem * #{ $width });
+    }
+
+    @if($height > 0) {
+        height: calc(0.0625rem * #{ $height });
+    }
+}
+
+
+
+.content {
     @include content(1220)
 }
 
@@ -81,11 +105,12 @@
     padding: 0 15px;
 }
 
-.row{
+.row {
     display: flex;
     width: 100%;
     height: auto;
     flex-wrap: wrap;
+
     @media (max-width: 768px) {
         flex-direction: column;
         justify-content: center;
@@ -93,61 +118,70 @@
     }
 }
 
-
+body {
+    margin-bottom: 60px;
+}
 
 $white-color: #fff;
-$red-color:  #F05454;
-$red-color-hover:  #f05454c5;
+$red-color: #F05454;
+$red-color-hover: #f05454c5;
 $green-color: #00E676;
 $green-color-hover: rgba(0, 230, 119, 0.89);
 $black-color: rgba(48, 71, 94, 0.85);
 $description-color: rgba(0, 0, 0, 0.25);
 
 
+.slick-next,
+.slick-prev{
+    display: none !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #fff;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #f05454;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #f05454be;
-  }
+}
 
 
 
-.green-button{
+.green-button {
     color: $white-color;
     background: $green-color;
     @include button();
-    &:hover{
+
+    &:hover {
         background: $green-color-hover;
     }
 }
 
 
-.red-button{
+.red-button {
     color: $white-color;
     background: $red-color;
     @include button();
-    &:hover{
+
+    &:hover {
         background: $red-color-hover;
     }
 }
 
 
 
-.logo{
+.logo {
     display: block;
     width: 312px;
 
@@ -156,48 +190,59 @@ $description-color: rgba(0, 0, 0, 0.25);
     }
 }
 
-.information{
+.information {
     @include FlexSpaceBetween();
-    .info{
+
+    .info {
         @include col(6);
         @include FlexSpaceBetween();
-        .col{
+
+        .col {
             width: 400px;
-            .red-block{
+
+            .red-block {
                 width: 100%;
-                a{
+
+                a {
                     width: 100%;
                     @include Flex-rigth-center();
                     color: $red-color;
                     text-align: right;
                     font-size: 22px;
-                    &:hover{
+
+                    &:hover {
                         color: $red-color-hover;
                     }
-                    img{
+
+                    img {
                         margin-right: 5px;
                     }
 
                 }
             }
-            .black-block{
+
+            .black-block {
                 position: relative;
                 margin-top: 25px;
-                a{
+
+                a {
                     display: flex;
                     justify-content: flex-end;
                     align-items: flex-end;
                     color: $black-color;
                     text-align: right;
-                    img{
+
+                    img {
                         margin-right: 5px;
                     }
-                    span{
+
+                    span {
                         font-size: 24px;
                         margin-left: 5px;
                     }
                 }
-                .descreption{
+
+                .descreption {
                     position: absolute;
                     right: 0;
                     font-size: 14px;
@@ -206,15 +251,18 @@ $description-color: rgba(0, 0, 0, 0.25);
                 }
             }
         }
-        .soc-site{
+
+        .soc-site {
             margin-left: 20px;
             display: flex;
             flex-direction: column;
-            a{
-                &:nth-of-type(1){
+
+            a {
+                &:nth-of-type(1) {
                     margin-left: 2px;
                     margin-bottom: 5px;
                 }
+
                 // img{
                 //     width: 50px;
                 // }
@@ -226,17 +274,19 @@ $description-color: rgba(0, 0, 0, 0.25);
 
 
 
-header{
+header {
     width: 100%;
     height: 600px;
     background: url(../img/header/header-bg.png) no-repeat center center;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-    .header-body{
+
+    .header-body {
         width: 100%;
         height: 100%;
         background: $black-color;
-        .mneu{
+
+        .mneu {
             width: 100%;
             height: 80px;
             background: $red-color;
@@ -244,7 +294,8 @@ header{
             color: $white-color;
             padding: 0 25px;
             overflow: auto;
-            a{
+
+            a {
                 color: $white-color;
                 font-size: 20px;
                 padding: 27px 0;
@@ -252,19 +303,22 @@ header{
                 white-space: nowrap;
             }
         }
-        .block-header-information{
+
+        .block-header-information {
             width: 100%;
             height: auto;
             @include Flex-left-center();
             flex-direction: column;
             align-items: end;
             margin-top: 80px;
-            h1{
+
+            h1 {
                 font-size: 36px;
                 line-height: 42px;
                 color: $white-color;
             }
-            .sub-title{
+
+            .sub-title {
                 font-weight: 300;
                 font-size: 24px;
                 line-height: 28px;
@@ -273,15 +327,18 @@ header{
                 margin-top: 10px;
             }
         }
-        .form-header{
+
+        .form-header {
             width: 100%;
             height: 400px;
             background: $red-color-hover;
             margin-top: 80px;
-            .title{
+
+            .title {
                 width: 100%;
                 @include FlexCenter();
-                span{
+
+                span {
                     font-weight: 300;
                     font-size: 24px;
                     line-height: 28px;
@@ -290,13 +347,15 @@ header{
                     margin-top: 15px;
                 }
             }
-            .row{
+
+            .row {
                 width: 80%;
-                margin: 0  auto;
+                margin: 0 auto;
                 margin-top: 30px;
                 @include FlexSpaceBetween();
             }
-            .white-inputs{
+
+            .white-inputs {
                 width: 250px;
                 height: 40px;
                 border-radius: 5px;
@@ -304,10 +363,12 @@ header{
                 padding: 0 10px;
                 @include FlexSpaceBetween();
                 margin-right: 20px;
-                img{
+
+                img {
                     width: 18px;
                 }
-                input{
+
+                input {
                     border: 0;
                     width: calc(100% - 25px);
                     height: 100%;
@@ -315,7 +376,8 @@ header{
                     font-size: 16px;
                 }
             }
-            .white-button{
+
+            .white-button {
                 padding: 10px 30px;
                 background: $white-color;
                 border: 0;
@@ -327,7 +389,8 @@ header{
                 display: block;
                 margin: 0 auto;
                 margin-top: 30px;
-                &:hover{
+
+                &:hover {
                     color: $red-color-hover;
                 }
             }
@@ -336,52 +399,61 @@ header{
 }
 
 
-.evocuator-block{
+.evocuator-block {
     width: 100%;
     height: 450px;
     @include Flex-space-between-top();
     padding: 20px;
     margin-top: 50px;
-    .img-block{
+
+    .img-block {
         width: 50%;
         @include FlexCenter();
-        img{
+
+        img {
             width: 80%;
         }
     }
-    .ev-information{
+
+    .ev-information {
         width: 50%;
-        h1{
+
+        h1 {
             font-weight: bold;
             font-size: 45px;
             line-height: 53px;
             color: $red-color;
-            &:nth-of-type(2){
+
+            &:nth-of-type(2) {
                 margin-top: 40px;
             }
         }
-        .text{
+
+        .text {
             font-weight: normal;
             font-size: 30px;
             line-height: 30px;
             color: $red-color;
             margin-top: -5px;
         }
-        .row{
+
+        .row {
             margin-top: 10px;
-            button{
+
+            button {
                 margin-right: 15px;
             }
         }
     }
-    .slider-evocuator{
+
+    .slider-evocuator {
         width: 100%;
         height: 90px;
         margin-top: 15px;
         position: relative;
         overflow: hidden;
 
-        &::before{
+        &::before {
             content: "";
             position: absolute;
             width: 20px;
@@ -390,8 +462,10 @@ header{
             box-shadow: 8px 0px 5px -5px rgba(0, 0, 0, 0.25);
             top: 0;
             left: -20px;
+            z-index: 100;
         }
-        &::after{
+
+        &::after {
             content: "";
             position: absolute;
             width: 20px;
@@ -401,7 +475,8 @@ header{
             top: 0;
             right: -20px;
         }
-        .images{
+
+        .images {
             width: auto;
             height: 100%;
             transform: translateX(0px);
@@ -411,26 +486,32 @@ header{
             animation-duration: 60s;
             animation-iteration-count: infinite;
             @include Flex-left-center();
-            img{
+
+            img {
                 width: 65px;
                 margin-right: 15px;
-                &:hover{
+
+                &:hover {
                     transition: 0.3s;
                     transform: scale(1.1);
                 }
             }
-            &:hover{
+
+            &:hover {
                 animation-play-state: paused;
             }
         }
+
         @keyframes Slider-mark-and-certifi {
-            0%{
+            0% {
                 transform: translateX(0px);
             }
-            50%{
+
+            50% {
                 transform: translateX(-100%);
             }
-            100%{
+
+            100% {
                 transform: translateX(0%);
             }
         }
@@ -438,13 +519,25 @@ header{
 }
 
 
-.black-title-h1{
+.black-title-h1 {
     width: 100%;
     margin-top: 200px;
     @include FlexCenter();
-    span{
+
+    span {
         color: $black-color;
         border-bottom: 1px solid $black-color;
+    }
+}
+
+.red-title-h1 {
+    width: 100%;
+    margin-top: 200px;
+    @include FlexCenter();
+
+    span {
+        color: $red-color;
+        border-bottom: 1px solid $red-color;
     }
 }
 
@@ -454,12 +547,13 @@ header{
 //     height: 700px;
 // }
 
-.work-reviewed{
+.work-reviewed {
     width: 100%;
     height: 800px;
     @include FlexSpaceBetween();
     margin-top: 100px;
-    .work{
+
+    .work {
         @include col(8);
         height: 100%;
         @include Flex-space-between-top();
@@ -467,11 +561,13 @@ header{
         // border-right: 1px solid $red-color;
         box-shadow: 12px 0px 12px -12px #c1c1c1;
         padding-right: 15px;
-        .steps{
+
+        .steps {
             width: 45px;
             height: 100%;
             flex-direction: column;
-            .number{
+
+            .number {
                 width: 45px;
                 height: 45px;
                 border: 1px solid $red-color;
@@ -481,7 +577,8 @@ header{
                 @include FlexCenter();
                 position: relative;
                 margin-top: 65px;
-                &:after{
+
+                &:after {
                     content: "";
                     width: 1px;
                     height: 55px;
@@ -491,17 +588,20 @@ header{
                     left: calc(50% - 1px);
 
                 }
-                &:nth-of-type(7)::after{
+
+                &:nth-of-type(7)::after {
                     display: none;
                 }
-                &.active{
+
+                &.active {
                     background: $red-color;
                     color: $white-color;
                     transition: 1s;
                 }
             }
         }
-        .text-and-image{
+
+        .text-and-image {
             width: calc(100% - 50px);
             height: 160px;
             background: url(../img/work-reviewed/solid.png) no-repeat bottom center;
@@ -509,7 +609,8 @@ header{
             position: relative;
             transition: 1s;
             transform: translateY(-68px);
-            .title{
+
+            .title {
                 font-weight: bold;
                 font-size: 20px;
                 line-height: 18px;
@@ -519,7 +620,8 @@ header{
                 bottom: 5px;
                 color: $black-color;
             }
-            .text{
+
+            .text {
                 width: 80%;
                 font-weight: 300;
                 font-size: 15px;
@@ -528,28 +630,33 @@ header{
                 left: 20%;
                 top: 108px;
                 color: $black-color;
-                a{
+
+                a {
                     color: $black-color;
                     font-weight: bold;
                 }
             }
-            .images{
+
+            .images {
                 width: 80%;
                 height: 80px;
                 position: absolute;
                 left: 20%;
                 top: 15px;
                 @include Flex-left-bottom();
-                img{
+
+                img {
                     margin-right: 10px;
                     width: 100px;
                 }
             }
         }
     }
-    .reviewed{
+
+    .reviewed {
         @include col(4);
-        .title{
+
+        .title {
             font-weight: bold;
             font-size: 22px;
             line-height: 26px;
@@ -560,11 +667,13 @@ header{
             box-shadow: 0px 12px 12px -12px #c1c1c1;
             margin-top: -10px;
         }
-        .reviewed-parent-block{
+
+        .reviewed-parent-block {
             width: 100%;
             height: 800px;
             overflow: auto;
-            .reviewed-block{
+
+            .reviewed-block {
                 width: 100%;
                 height: auto;
                 padding: 10px 25px;
@@ -572,38 +681,45 @@ header{
                 border-bottom: 1px solid rgba(48, 71, 94, 0.17);
                 display: flex;
                 margin-top: 15px;
-                .img-block{
+
+                .img-block {
                     width: 45px;
                     height: 100%;
                     margin-right: 10px;
-                    img{
+
+                    img {
                         width: 45px;
                         height: 45px;
                         border-radius: 50%;
                     }
                 }
-                .information-block{
+
+                .information-block {
                     width: calc(100% - 45px);
                     height: auto;
-                    .user-name{
+
+                    .user-name {
                         font-weight: bold;
                         font-size: 22px;
                         line-height: 26px;
                         color: $red-color;
                     }
-                    .desc{
+
+                    .desc {
                         font-style: normal;
                         font-weight: 300;
                         font-size: 12px;
                         line-height: 14px;
                         color: $black-color;
                     }
-                    .starts{
+
+                    .starts {
                         width: 100%;
                         height: auto;
                         @include Flex-left-center();
                         margin: 3px 0;
-                        .start-img{
+
+                        .start-img {
                             margin-right: 3px;
                             width: 14px;
                             height: 14px;
@@ -612,12 +728,281 @@ header{
 
                         }
                     }
-                    .text{
+
+                    .text {
                         font-style: normal;
                         font-weight: 300;
                         font-size: 15px;
                         line-height: 18px;
                         color: $black-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.video-galery {
+    overflow: hidden;
+    margin-top: 30px;
+    display: flex;
+    justify-content: start;
+    padding: 15px 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: calc(100% + 30px);
+        background: #fff;
+        box-shadow: 7px 0px 4px -4px rgba(0, 0, 0, 0.25);
+        top: -20px;
+        left: 0px;
+        z-index: 100;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: calc(100% + 30px);
+        background: #fff;
+        box-shadow: -7px 0px 4px -4px rgba(0, 0, 0, 0.25);
+        top: -20px;
+        right: 0px;
+        z-index: 100;
+    }
+
+    .blocks {
+        @include width-height-rem(290, 0);
+        height: auto;
+        background: $red-color;
+        border-radius: 5px;
+        padding-bottom: 15px;
+        margin-right: 20px;
+
+        .img-block {
+            width: 100%;
+            @include width-height-rem(0, 190);
+            position: relative;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 110px;
+                background: linear-gradient(0deg, $red-color, transparent);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .icon-play {
+                @include width-height-rem(60, 60);
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 80px;
+                cursor: pointer;
+                transition: 0.3s;
+                z-index: 100;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+
+            .block-category {
+                @include width-height-rem(15, 15);
+                position: absolute;
+                right: 10px;
+                top: 10px;
+
+            }
+        }
+
+        .title {
+            font-style: normal;
+            font-weight: bold;
+            @include font-rem(25);
+            line-height: 29px;
+            color: $white-color;
+            padding-left: 10px;
+        }
+
+        .sub-title {
+            font-style: normal;
+            font-weight: 300;
+            @include font-rem(13);
+            line-height: 15px;
+            color: $white-color;
+            padding-left: 10px;
+            margin-top: 5px;
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bootom-menu {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: $red-color;
+    box-shadow: 0px -1px 6px 0px #ccc;
+    z-index: 1000000;
+
+    .content {
+        height: 50px;
+        @include FlexCenter();
+
+        .col {
+            @include col(1);
+            height: 40px;
+            border-right: 1px solid rgba(255, 255, 255, 0.438);
+            @include FlexCenter();
+
+            a {
+                @include FlexCenter();
+                flex-direction: column;
+
+                img {
+                    width: 22px;
+                }
+
+                span {
+                    color: $white-color;
+                    font-weight: 100;
+                    font-size: 15px;
+                    line-height: 18px;
+                    text-transform: capitalize;
+                }
+
+                &:hover {
+                    span {
+                        color: rgb(230, 228, 228);
+                    }
+                }
+            }
+
+            .call {
+                width: 450px;
+                height: 32px;
+                background: $white-color;
+                border-radius: 30px;
+                @include FlexSpaceBetween();
+                margin: 0 auto;
+                padding: 0 10px;
+
+                .title {
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: $red-color;
+                    width: 100px;
+                    text-align: center;
+                }
+
+                .for-inp {
+                    width: 150px;
+                    height: 22px;
+                    border: 1px solid $red-color;
+                    border-radius: 30px;
+                    @include Flex-left-center();
+                    font-weight: 300;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: $black-color;
+                    padding-left: 5px;
+                    overflow: hidden;
+                    margin-right: 5px;
+
+                    span {
+                        width: 20px;
+                    }
+
+                    input {
+                        border: 0;
+                        height: 100%;
+                        width: 125px;
+                    }
+                }
+
+                button {
+                    border: 0;
+                    background: $green-color;
+                    color: #fff;
+                    border-radius: 30px;
+                    white-space: nowrap;
+                    @include FlexCenter();
+                    height: 22px;
+                    padding: 0 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: $green-color-hover;
+                    }
+
+                    svg {
+                        margin-right: 5px;
+                        fill: $white-color;
+                        width: 15px;
                     }
                 }
             }
