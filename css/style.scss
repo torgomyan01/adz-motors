@@ -853,7 +853,33 @@ header {
 
 
 }
-
+.car-filter{
+    margin-top: -50px;
+    #car-filter{
+        background: #f05454;
+        border: 0;
+        color: #fff;
+        padding: 8px 10px 8px 40px;
+        border-radius: 5px;
+        margin-left: 20px;
+        position: relative;
+        cursor: pointer;
+        font-weight: 300;
+        @include font-rem(18);
+        line-height: 25px;
+        color: $white-color;
+        option{
+            padding: 5px 0;
+            border: 0;
+            text-align: center;
+        }
+    }
+    svg{
+        transform: translate(60px, 5px);
+        position: relative;
+        z-index: 1;
+    }
+}
 
 
 
@@ -1009,3 +1035,5 @@ header {
         }
     }
 }
+
+
