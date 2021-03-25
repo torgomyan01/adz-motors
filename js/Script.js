@@ -2,7 +2,7 @@ $(window).on('load', function(){
     lazyload();
     getSliderWorking();
 })
-
+lazyload();
 let ArrayWorkingSlider = [
     [
         'ДЕФЕКТОВКА И ДИАГНОСТИКА',
@@ -165,7 +165,15 @@ function getSliderWorking(){
     },5000)
 }
 
-
+$('.top-bottom .top').on('click', function(){
+    var body = $("html, body");
+    body.stop().animate({scrollTop:0}, 1000,);
+})
+$('.top-bottom .bottom').on('click', function(){
+    var body = $("html, body");
+    let b_h = $('body').height();
+    body.stop().animate({scrollTop: b_h}, 1000,);
+})
 
 
 
@@ -178,7 +186,7 @@ $('.video-galery').slick({
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 768,
@@ -199,6 +207,38 @@ $('.video-galery').slick({
         }
       }
     ]
+  });
+
+
+
+
+  $('.body-img-galery').slick({
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    centerPadding: '60px',
+    centerMode: true,
+    responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
   });
 
 
