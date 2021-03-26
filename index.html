@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F05454">
     <title>NEW Site</title>
     
     
@@ -17,12 +18,14 @@
 
     <!-- SCRIPTS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+    
     
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
-<body>
-    
+<body style="overflow: hidden;">
+    <div class="loadong-site">
+        <div class="loader"></div>
+    </div>
 
     <div class="content information">
         <a href="/" class="logo">
@@ -73,27 +76,48 @@
         </div>
     </div>
 
+    <!-- menu  -->
+<div class="content menu-site">
+    <div class="mneu">
+        <a href="#">DSG</a>
+        <a href="#">Power-Shift</a>
+        <a href="#">CVT</a>
+        <a href="#">ZF</a>
+        <a href="#">Вариаторы</a>
+        <a href="#">Роботы</a>
+        <a href="#">Полноценный автомат</a>
+        <a href="#">Механические коробки</a>
+        <div class="icon-menu-for-close">
+            <i class="icons" data-i="menu-mobile"></i>
+        </div>
+        <button class="green-button">Заказать звонок</button>
+    </div>
+
+    <!-- menu  -->
+
+    <div class="mobile-menu">
+        <div class="close-mobile-menu">
+            
+        </div>
+        <a href="#">DSG</a>
+        <a href="#">Power-Shift</a>
+        <a href="#">CVT</a>
+        <a href="#">ZF</a>
+        <a href="#">Вариаторы</a>
+        <a href="#">Роботы</a>
+        <a href="#">Полноценный автомат</a>
+        <a href="#">Механические коробки</a>
+    </div>
+
+</div>
 
     <!-- header  -->
 
     <header>
         <div class="header-body">
             <div class="content">
-                <!-- menu  -->
-
-                <div class="mneu">
-                    <a href="#">DSG</a>
-                    <a href="#">Power-Shift</a>
-                    <a href="#">CVT</a>
-                    <a href="#">ZF</a>
-                    <a href="#">Вариаторы</a>
-                    <a href="#">Роботы</a>
-                    <a href="#">Полноценный автомат</a>
-                    <a href="#">Механические коробки</a>
-                </div>
-
-                <!-- menu  -->
-
+                
+                
 
 
                 <!-- header text block  -->
@@ -263,18 +287,17 @@
                 <div class="title">СЛЕСАРНЫЕ РАБОТЫ</div>
                 <div class="text">Перед тем как начать кузовной ремонт, наши мастера выполняют диагностику и дефектовку повреждений, определяют, какой ремонт необходимо <a href="#">читать далее...</a> </div>
                 <div class="images">
-                    <img src="img/work-reviewed/car1.jpg" alt="">
-                    <img src="img/work-reviewed/car2.jpg" alt="">
-                    <img src="img/work-reviewed/car3.jpg" alt="">
-                    <img src="img/work-reviewed/car4.jpg" alt="">
-                    <img src="img/work-reviewed/car5.jpg" alt="">
-                    <img src="img/work-reviewed/car3.jpg" alt="">
-                    <img src="img/work-reviewed/car4.jpg" alt="">
-                    <img src="img/work-reviewed/car5.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car1.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car2.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car3.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car4.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car5.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car3.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car4.jpg" alt="">
+                    <img class="lazyload" data-src="img/work-reviewed/car5.jpg" alt="">
                 </div>
             </div>
         </div>
-
 
 
 
@@ -287,7 +310,7 @@
                 <!-- Отзывов block  -->
                 <div class="reviewed-block">
                     <div class="img-block">
-                        <img src="img/work-reviewed/reviewed/user1.png" alt="">
+                        <img class="lazyload" data-src="img/work-reviewed/reviewed/user1.png" alt="">
                     </div>
                     <div class="information-block">
                         <div class="user-name">Мелина А.</div>
@@ -313,7 +336,7 @@
                 <!-- Отзывов block  -->
                 <div class="reviewed-block">
                     <div class="img-block">
-                        <img src="img/work-reviewed/reviewed/user2.png" alt="">
+                        <img class="lazyload" data-src="img/work-reviewed/reviewed/user2.png" alt="">
                     </div>
                     <div class="information-block">
                         <div class="user-name">Мелина А.</div>
@@ -339,7 +362,7 @@
                 <!-- Отзывов block  -->
                 <div class="reviewed-block">
                     <div class="img-block">
-                        <img src="img/work-reviewed/reviewed/user1.png" alt="">
+                        <img class="lazyload" data-src="img/work-reviewed/reviewed/user1.png" alt="">
                     </div>
                     <div class="information-block">
                         <div class="user-name">Мелина А.</div>
@@ -365,7 +388,7 @@
                 <!-- Отзывов block  -->
                 <div class="reviewed-block">
                     <div class="img-block">
-                        <img src="img/work-reviewed/reviewed/user2.png" alt="">
+                        <img class="lazyload" data-src="img/work-reviewed/reviewed/user2.png" alt="">
                     </div>
                     <div class="information-block">
                         <div class="user-name">Мелина А.</div>
@@ -391,7 +414,7 @@
                 <!-- Отзывов block  -->
                 <div class="reviewed-block">
                     <div class="img-block">
-                        <img src="img/work-reviewed/reviewed/user1.png" alt="">
+                        <img class="lazyload" data-src="img/work-reviewed/reviewed/user1.png" alt="">
                     </div>
                     <div class="information-block">
                         <div class="user-name">Мелина А.</div>
@@ -417,7 +440,7 @@
                 <!-- Отзывов block  -->
                 <div class="reviewed-block">
                     <div class="img-block">
-                        <img src="img/work-reviewed/reviewed/user1.png" alt="">
+                        <img class="lazyload" data-src="img/work-reviewed/reviewed/user1.png" alt="">
                     </div>
                     <div class="information-block">
                         <div class="user-name">Мелина А.</div>
@@ -495,7 +518,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="video"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -516,7 +539,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="photo"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -538,7 +561,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="video"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -559,7 +582,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="photo"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -581,7 +604,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="video"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -602,7 +625,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="photo"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -624,7 +647,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="video"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -645,7 +668,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="photo"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -667,7 +690,7 @@
                     <div class="block-category">
                         <i class="icons" data-i="video"></i>
                     </div>
-                    <img src="img/video-block/video-block-img.jpg" alt="">
+                    <img class="lazyload" data-src="img/video-block/video-block-img.jpg" alt="">
                 </div>
                 <div class="title">
                     Opel Vectra B
@@ -703,7 +726,7 @@
             <div class="news-col">
                 <div class="title">РЕМОНТ DSG</div>
                 <div class="img-block">
-                    <img src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
+                    <img class="lazyload" data-src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
                 </div>
                 <div class="sub-text">
                     Далеко-далеко за словесными горами в 
@@ -717,7 +740,7 @@
             <div class="news-col">
                 <div class="title">РЕМОНТ DSG</div>
                 <div class="img-block">
-                    <img src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
+                    <img class="lazyload" data-src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
                 </div>
                 <div class="sub-text">
                     Далеко-далеко за словесными горами в 
@@ -731,7 +754,7 @@
             <div class="news-col">
                 <div class="title">РЕМОНТ DSG</div>
                 <div class="img-block">
-                    <img src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
+                    <img class="lazyload" data-src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
                 </div>
                 <div class="sub-text">
                     Далеко-далеко за словесными горами в 
@@ -745,7 +768,7 @@
             <div class="news-col">
                 <div class="title">РЕМОНТ DSG</div>
                 <div class="img-block">
-                    <img src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
+                    <img class="lazyload" data-src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
                 </div>
                 <div class="sub-text">
                     Далеко-далеко за словесными горами в 
@@ -759,7 +782,7 @@
             <div class="news-col">
                 <div class="title">РЕМОНТ DSG</div>
                 <div class="img-block">
-                    <img src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
+                    <img class="lazyload" data-src="img/new-block/4 2.jpg" alt="РЕМОНТ DSG">
                 </div>
                 <div class="sub-text">
                     Далеко-далеко за словесными горами в 
@@ -902,9 +925,9 @@
 
 
     <!-- product block to img left  -->
-    <div class="product-left content-fluid" style="margin: -300px 0;">
+    <div class="product-left content-fluid mt-200" style="margin: -300px 0;">
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="info">
             <div class="title">Замена АКПП на контрактную коробку</div>
@@ -918,8 +941,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -949,15 +972,15 @@
         </div>
         <div class="product-galery">
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -987,8 +1010,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1017,19 +1040,19 @@
             </table>
         </div>
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="product-galery" >
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1047,7 +1070,7 @@
     <!-- product block to img left  -->
     <div class="product-left content-fluid" style="margin: -300px 0;">
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="info">
             <div class="title">Замена АКПП на контрактную коробку</div>
@@ -1061,8 +1084,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1092,15 +1115,15 @@
         </div>
         <div class="product-galery">
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1130,8 +1153,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1160,19 +1183,19 @@
             </table>
         </div>
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="product-galery" >
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1193,7 +1216,7 @@
     <!-- product block to img left  -->
     <div class="product-left content-fluid" style="margin: -300px 0;">
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="info">
             <div class="title">Замена АКПП на контрактную коробку</div>
@@ -1207,8 +1230,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1238,15 +1261,15 @@
         </div>
         <div class="product-galery">
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1276,8 +1299,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1306,19 +1329,19 @@
             </table>
         </div>
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="product-galery" >
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1334,7 +1357,7 @@
     <!-- product block to img left  -->
     <div class="product-left content-fluid" style="margin: -300px 0;">
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="info">
             <div class="title">Замена АКПП на контрактную коробку</div>
@@ -1348,8 +1371,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1379,15 +1402,15 @@
         </div>
         <div class="product-galery">
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1404,7 +1427,7 @@
 
     
     <!-- product block to img rigth  -->
-    <div class="product-rigth content-fluid" style="margin: -300px 0;">
+    <div class="product-rigth content-fluid " style="margin: -300px 0;">
         <div class="info">
             <div class="title">Замена АКПП на контрактную коробку</div>
             <div class="sub-title">
@@ -1417,8 +1440,8 @@
             </div>
             <table class="table">
                 <tr>
-                    <th class="title">Снятие и установка АКПП</th>
-                    <th class="title">Цени</th>
+                    <th class="title-tb">Снятие и установка АКПП</th>
+                    <th class="title-tb">Цени</th>
                 </tr>
                 <tr>
                     <td>Заднеприводные автомобили</td>
@@ -1447,26 +1470,26 @@
             </table>
         </div>
         <div class="img-block">
-            <img src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
+            <img class="lazyload" data-src="img/product/akpp 2.jpg" alt="Замена АКПП на контрактную коробку">
         </div>
         <div class="product-galery" >
             <div class="body-img-galery" >
-                <img src="img/product/3m 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
-                <img src="img/product/autodoc 2.jpg" alt="">
-                <img src="img/product/avtorus 2.jpg" alt="">
-                <img src="img/product/castrol 2.jpg" alt="">
-                <img src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/3m 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/autodoc 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/avtorus 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/castrol 2.jpg" alt="">
+                <img class="lazyload" data-src="img/product/duxone 2.jpg" alt="">
             </div>
         </div>
     </div>
     <!-- product block to img rigth  -->
 
 
-    <section class="red-playgon content-fluid mr-0">
+    <section class="red-playgon content-fluid mr-0 h-650">
         <div class="bg-left "></div>
     </section>
 
@@ -1510,42 +1533,7 @@
             <span class="sub-text">СООБЩИТЕ НАМ, И МЫ БЫСТРО РЕШИМ ЭТОТ ВОПРОС</span>
         </h1>
         <div class="row">
-            <!-- <div class="inform">
-                <p>
-                    Москва, 32-й км., вл. 4, вход 7
-                    <span>
-                        Круглосуточно, ПН-ВС
-                    </span>
-                </p>
-    
-                <p>
-                    Алтуфьевское шоссе, 51с2
-                    <span>
-                        10:00-18:00, ПН-ПТ
-                    </span>
-                </p>
-    
-                <p>
-                    ул. Паршина, вл4
-                    <span>
-                        10:00-18:00, ПН-ПТ
-                    </span>
-                </p>
-    
-                <p>
-                    Профсоюзная улица, 58к4
-                    <span>
-                        10:00-18:00, ПН-ПТ
-                    </span>
-                </p>
-    
-                <p>
-                    Волгоградский проспект, 23с2
-                    <span>
-                        10:00-18:00, ПН-ПТ
-                    </span>
-                </p>
-            </div> -->
+          
            
             <div class="form">
                 <form action="#">
@@ -1678,43 +1666,43 @@
         <div class="content">
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/otziv.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/otziv.svg" alt="">
                     <span>Отзывы</span>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/support 1.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/support 1.svg" alt="">
                     <span>Консультация</span>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/evacuator 1.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/evacuator 1.svg" alt="">
                     <span>эвакуатор</span>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/offer 1.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/offer 1.svg" alt="">
                     <span>Скидки</span>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/contract 1.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/contract 1.svg" alt="">
                     <span>Подписаться</span>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/question 1.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/question 1.svg" alt="">
                     <span>Почему мы?</span>
                 </a>
             </div>
             <div class="col">
                 <a href="#">
-                    <img src="img/bootom-menu/question 1.svg" alt="">
+                    <img class="lazyload" data-src="img/bootom-menu/question 1.svg" alt="">
                     <span>Гарантия</span>
                 </a>
             </div>

@@ -1,8 +1,11 @@
 $(window).on('load', function(){
-    lazyload();
     getSliderWorking();
+    $.getScript('https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js', function(){
+        lazyload();
+    })
+    $('.loadong-site').css('display', 'none');
+    $('body').css('overflow','unset');
 })
-lazyload();
 let ArrayWorkingSlider = [
     [
         'ДЕФЕКТОВКА И ДИАГНОСТИКА',
@@ -157,11 +160,17 @@ function getSliderWorking(){
         slImg();
         toClassAdd();
         slText.html(ArrayWorkingSlider[arrayNumber][2]);
-        sliderBlock.css('transform', 'translateY('+ transformNumberToWork +'px)');
+        
+        if($(window).width() >= 425){
+            sliderBlock.css('transform', 'translateY('+ transformNumberToWork +'px)');
+        }else{
+            sliderBlock.css('transform', 'unset');
+        }
         if(transformNumberToWork === 592){
             transformNumberToWork = -178;
             arrayNumber = -1;
         }
+
     },5000)
 }
 
@@ -176,34 +185,86 @@ $('.top-bottom .bottom').on('click', function(){
 })
 
 
+$('.close-mobile-menu').on('click', function(){
+    $('.mobile-menu').css('transform', 'translateX(100%)');
+})
+$('.icon-menu-for-close').on('click', function(){
+    console.log('da');
+    $('.mobile-menu').css('transform', 'translateX(0)');
+})
+
+
+$(window).on('load', function(){
+    let offset = $('.menu-site').offset();
+    let top = offset.top;
+    $(window).on('scroll', function(){
+        let windowScrollTop = $(this).scrollTop();
+        if(windowScrollTop > top){
+            menuFix(true);
+        }else{
+            menuFix(false);
+        }
+    })
+})
 
 
 
+function menuFix(fix){
+    if(fix){
+        $('.menu-site').addClass('menu-fix');
+    }
+    if(!fix){
+        $('.menu-site').removeClass('menu-fix');
+    }
+}
 
 
 
 $('.video-galery').slick({
-    centerMode: true,
-    centerPadding: '60px',
+    dots: false,
+    infinite: false,
+    speed: 300,
     slidesToShow: 6,
-    slidesToScroll: 2,
+    slidesToScroll: 6,
+    prevArrow: false,
+    nextArrow: false,
+    variableWidth: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1250,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 5,
+          slidesToScroll: 5,
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 1090,
         settings: {
-          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
           centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
         }
       }
     ]
