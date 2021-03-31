@@ -1,11 +1,12 @@
 $(window).on('load', function(){
     getSliderWorking();
-    $.getScript('https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js', function(){
-        lazyload();
-    })
     $('.loadong-site').css('display', 'none');
-    $('body').css('overflow','unset');
+    $('body').css('overflow','hidden scroll');
+    AOS.init({
+        offset: 20,
+      });
 })
+
 let ArrayWorkingSlider = [
     [
         'ДЕФЕКТОВКА И ДИАГНОСТИКА',
@@ -217,6 +218,26 @@ function menuFix(fix){
         $('.menu-site').removeClass('menu-fix');
     }
 }
+
+
+
+
+$('.close-popup').on('click', function(){
+    $('.pop-up').css('display', 'none');
+})
+
+$('.open-popup').on('click', openPopUp);
+
+function openPopUp(){
+    $('.pop-up').css('display', 'flex');
+}
+
+
+$(window).on('click', function(e){
+    if($(e.target).attr('class') === 'pop-up'){
+        $('.pop-up').css('display', 'none');
+    }
+})
 
 
 
