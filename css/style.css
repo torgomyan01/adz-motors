@@ -929,11 +929,13 @@ header {
           -webkit-transition: 1s;
           transition: 1s; }
     .work-reviewed .work .text-and-image {
-      width: calc(100% - 50px);
+      width: calc(100% - 110px);
       height: 160px;
       background: url(../img/work-reviewed/solid.png) no-repeat bottom center;
       background-size: 100% 60px;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 105px;
       -webkit-transition: 1s;
       transition: 1s;
       -webkit-transform: translateY(-68px);

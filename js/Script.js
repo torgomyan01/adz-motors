@@ -161,7 +161,7 @@ function getSliderWorking(){
         slImg();
         toClassAdd();
         slText.html(ArrayWorkingSlider[arrayNumber][2]);
-        
+
         if($(window).width() >= 425){
             sliderBlock.css('transform', 'translateY('+ transformNumberToWork +'px)');
         }else{
